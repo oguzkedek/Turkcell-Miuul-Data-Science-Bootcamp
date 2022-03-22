@@ -152,4 +152,3 @@ movie_name = user_movie_df[movie_name]
 user_movie_df.corrwith(movie_name).sort_values(ascending=False)[1:6]
 # Lord of the Rings: The Fellowship of the Ring, The (2001) filmi ile benzer beğenilme yapısına sahip olan filmleri
 # bulduk
-

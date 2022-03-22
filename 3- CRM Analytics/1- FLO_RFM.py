@@ -235,29 +235,3 @@ case_a = df_all.loc[((df_all['segment'] == 'champions') | (df_all['segment'] == 
                     (df_all['interested_in_categories_12'].str.contains('KADIN'))].master_id
 
 case_a.to_csv("customers.csv", index=False)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

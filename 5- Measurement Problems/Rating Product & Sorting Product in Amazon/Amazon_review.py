@@ -124,9 +124,3 @@ df.sort_values('wilson_lower_bound', ascending=False).head(20)
 # 7 oylaması bulunan ve faydalı bulunma oranı 1 olan bir yorumun wlb değeri daha düşük seviyelerdedir. Bu bize
 # bu yorumdaki toplam oy sayısının istatistiki olarak değerlendirme açısından daha zayıf kaldığını gösterir. 0.75229 faydalı
 # bulunma oranı bulunan bir yorum bu yorumdan daha yüksek wlb skoruna sahiptir.
-
-
-
-
-
-

@@ -116,13 +116,3 @@ print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 # İşletmenin başarı ölçütü olarak belirlediği Purchase değişkeninde istatistiki olarak anlamlı bir gelişme kaydedilmediği
 # görülmektedir. Bir süre daha bu değişken özelinde AB testleri yapılabilir ve gelişme kaydedilip kaydedilmediği
 # gözlemlenmeye devam edilebilir.Mevcut koşullarda yeni teklif türünün daha avantajlı olduğunu bilimsel açıdan söyleyemeyiz.
-
-
-
-
-
-
-
-
-
-

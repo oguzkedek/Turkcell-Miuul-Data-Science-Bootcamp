@@ -211,7 +211,3 @@ check_id(df, reco_2[0])
 
 check_id(df, reco_3[0])
 # "POPPY'S PLAYHOUSE BATHROOM" satın alan müşterimiz için önerimiz  "POPPY'S PLAYHOUSE LIVINGROOM "
-
-
-
-
