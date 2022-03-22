@@ -16,4 +16,7 @@ seçilmiştir.Seçilen tüm kullanıcıların en az 20filme oy verdiği bilgisi 
 - userid = Eşsiz kullanıcı numarası. (UniqueID)
 - movieId = Eşsiz film numarası. (UniqueID)
 - rating = Kullanıcı tarafından filme verilen puan 
-- timestamp = Değerlendirme tarihi
+- timestamp = Değerlendirme tarihi  
+
+Veri setine https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset
+linkinden ulaşabilirsiniz. 
