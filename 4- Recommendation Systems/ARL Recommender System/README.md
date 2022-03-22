@@ -6,9 +6,9 @@ en uygun ürün önerisini birliktelik kuralı kullanarak yapınız.
 Germany müşterileri üzerinden türetiniz.
 
 
-Kullanıcı1’in sepetinde bulunan ürünün id'si: 21987 
-Kullanıcı2’in sepetinde bulunan ürünün id'si: 23235 
-Kullanıcı3’in sepetinde bulunan ürünün id'si: 22747 
+Kullanıcı1’in sepetinde bulunan ürünün id'si: 21987 / 
+Kullanıcı2’in sepetinde bulunan ürünün id'si: 23235 /
+Kullanıcı3’in sepetinde bulunan ürünün id'si: 22747 /
 
 
 ### Veri Seti Hikayesi 
