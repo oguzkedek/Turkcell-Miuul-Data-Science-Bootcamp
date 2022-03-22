@@ -200,7 +200,6 @@ reco_3 = arl_recommender(rules, 22747, 1)
 
 #%%
 
-
 # Adım 3
 
 check_id(df, reco_1[0])
