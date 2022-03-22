@@ -110,7 +110,6 @@ df['score_average_rating'] = df.apply(lambda x: score_average_rating(x['helpful_
 df['wilson_lower_bound'] = df.apply(lambda x: wilson_lower_bound(x['helpful_yes'],
                                                                  x['helpful_no']), axis=1)
 
-
 df.sort_values('wilson_lower_bound', ascending=False).head(20)
 
 # Wilson_lower_bound ile up oranına ait güven aralığı hesaplanır ve yanlılık problemine çözüm yöntemlerinden birisidir.
