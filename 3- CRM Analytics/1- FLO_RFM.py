@@ -211,7 +211,6 @@ seg_map = {
 rfm['segment'] = rfm['RF_SCORE'].replace(seg_map, regex=True)
 
 #%%
-
 rfm.loc[:, rfm.columns !='RF_SCORE'].groupby('segment').agg(['mean', 'count'])
 
 """
