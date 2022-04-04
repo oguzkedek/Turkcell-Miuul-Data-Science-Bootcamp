@@ -1,6 +1,6 @@
  ## İŞ PROBLEMİ
 
- FLO müşterilerini segmentlere ayırıp bu segmentlere göre pazarlama stratejileri belirlemek istiyor.
+ Şirket müşterilerini segmentlere ayırıp bu segmentlere göre pazarlama stratejileri belirlemek istiyor.
  Buna yönelik olarak müşterilerin davranışları tanımlanacak ve bu davranışlardaki öbeklenmeye göre gruplar oluşturulacak.
 
  ### Veri Seti Hikayesi

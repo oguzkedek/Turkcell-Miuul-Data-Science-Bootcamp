@@ -1,5 +1,5 @@
 #######################
-# Oğuz Kedek - FLO Case - Endüstri Projesi 2
+# Oğuz Kedek - Case - Endüstri Projesi 2
 #######################
 
 
@@ -22,7 +22,7 @@ from sklearn.preprocessing import MinMaxScaler
 # Görev 1 Veriyi Hazırlama
 ###############################################
 
-df_ = pd.read_csv('Hafta_3/FLO_RFM_Analizi/flo_data_20K.csv')
+df_ = pd.read_csv('Hafta_3/RFM_Analizi/data_20K.csv')
 df = df_.copy()
 
 df.describe().T

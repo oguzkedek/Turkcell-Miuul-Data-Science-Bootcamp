@@ -1,6 +1,10 @@
 #######################
-# Oğuz Kedek - FLO Case - Endüstri Projesi 1
+# Oğuz Kedek - Case - Endüstri Projesi 1
 #######################
+
+# Veri seti KVKK çerveçevesinde paylaşılamayacaktır .
+
+#%%
 
 import datetime as dt
 import pandas as pd
@@ -13,7 +17,7 @@ pd.set_option('display.width', 500)
 # Görev 1 Veriyi Anlama ve Hazırlama
 ###############################################
 
-df_ = pd.read_csv('Hafta_3/FLO_RFM_Analizi/flo_data_20K.csv')
+df_ = pd.read_csv('Hafta_3/RFM_Analizi/data_20K.csv')
 df = df_.copy()
 
 df.head(10)  # İlk 10 gözlem
@@ -211,6 +215,7 @@ seg_map = {
 rfm['segment'] = rfm['RF_SCORE'].replace(seg_map, regex=True)
 
 #%%
+
 rfm.loc[:, rfm.columns !='RF_SCORE'].groupby('segment').agg(['mean', 'count'])
 
 """
@@ -218,7 +223,7 @@ rfm.loc[:, rfm.columns !='RF_SCORE'].groupby('segment').agg(['mean', 'count'])
 - Burada ayırt edici nokta işlem sıklığıdır. Aynı zamanda champions segmentinin monetary değerleri de
 tatmin edici seviyededir.
 -can't lose segmenti yakın zamanda alışveriş yapmamasına rağmen en sık alışveriş yapan segment konumundadır
-ve bizim için değerlidir. İşletmeye en çok para kazandıran segmenttir.
+ve bizim için değerlidir.
  
 """
 
@@ -234,3 +239,29 @@ case_a = df_all.loc[((df_all['segment'] == 'champions') | (df_all['segment'] == 
                     (df_all['interested_in_categories_12'].str.contains('KADIN'))].master_id
 
 case_a.to_csv("customers.csv", index=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
