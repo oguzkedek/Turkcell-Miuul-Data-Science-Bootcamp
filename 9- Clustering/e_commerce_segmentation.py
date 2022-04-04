@@ -25,7 +25,7 @@ pd.set_option('display.float_format', lambda x: '%.4f' % x)
 # Görev 1 - Veriyi Hazırlama
 ##########################################
 
-df = pd.read_csv('datasets/flo_data_20K.csv')
+df = pd.read_csv('datasets/data_20K.csv')
 
 data_understanding(df)
 
@@ -75,11 +75,13 @@ plt.show()
 
 df["interested_in_categories_12"].unique()
 
-df['interested_in_categories_12'] = df['interested_in_categories_12'].str.replace("[","")
-df['interested_in_categories_12'] = df['interested_in_categories_12'].str.replace("]","")
-df['interested_in_categories_12'] = df['interested_in_categories_12'].str.replace("'","")
+df['interested_in_categories_12'] = df['interested_in_categories_12'].str.replace("[", "")
+df['interested_in_categories_12'] = df['interested_in_categories_12'].str.replace("]", "")
+df['interested_in_categories_12'] = df['interested_in_categories_12'].str.replace("'", "")
 one_hot = MultiLabelBinarizer()
+one_hot.classes_
 y_classes = one_hot.fit_transform(df['interested_in_categories_12'].str.split(', '))
+y_classes = pd.DataFrame(y_classes, columns=one_hot.classes_)
 y_classes = pd.DataFrame(y_classes,
                          columns=['uncategorized', 'aktif_cocuk', 'aktif_spor', 'cocuk', 'erkek', 'kadin'])
 
