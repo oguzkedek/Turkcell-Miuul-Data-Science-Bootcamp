@@ -281,7 +281,24 @@ ORDER BY 2 DESC
 
 -- 20 / Platfrom kırılımında en çok alışveriş yapan müşteriyi getiren sorguyu yazınız.
 
+SELECT order_channel,
+SUM(customer_value_total_ever_online + customer_value_total_ever_offline) CIRO ,
+SUM(order_num_total_ever_offline + order_num_total_ever_online) ALISVERIS_SAYISI,
+(   select top 1 
+    master_id
+    from CUSTOMERS where order_channel = C.order_channel 
+    order by (customer_value_total_ever_online + customer_value_total_ever_offline) DESC
+) ID 
+from CUSTOMERS C 
+group by order_channel 
 
+/*
+    order_channel	            CIRO	            ALISVERIS_SAYISI	ID
+    Desktop	                    1610321.459999976	10920	            a4d534a2-5b1b-11eb-8dbd-000d3a38a36f
+    Android App	                7819062.760000151	52269	            5d1c466a-9cfd-11e9-9897-000d3a38a36f
+    Mobile	                    3028183.1599999997	21679	            fef57ffa-aae6-11e9-a2fc-000d3a38a36f
+    Ios App	                    2525999.9299999992	15351	            73fd19aa-9e37-11e9-9897-000d3a38a36f
+*/
 
 
 --21 /  En son alışveriş yapan kişinin ID’sini getiren sorguyu yazınız. (Max son tarihte birden fazla alışveriş yapan ID bulunmakta. Bunları da getiriniz.)
@@ -313,23 +330,26 @@ WHERE last_order_date = (SELECT MAX(last_order_date) FROM CUSTOMERS)
     241f0ad0-afb5-11e9-9757-000d3a38a36f	2021-05-30	36.83333333333333333333
 */
 
--- 23 /  Platform kırılımında en son alışveriş yapan kişilerin fatura başına ortalamasını getiren sorguyu yazınız.
 
-
-
--- 24 /  İlk alışverişini yapan kişinin ID’sini getiren sorguyu yazınız.
+-- 23 /  İlk alışverişini yapan kişinin ID’sini getiren sorguyu yazınız.
 
 SELECT master_id MUSTERI_ID, first_order_date TARIH
 FROM CUSTOMERS
-WHERE first_order_date = (SELECT MIN(first_order_date) FROM CUSTOMERS)
+WHERE first_order_date = last_order_date
 
 /*
     MUSTERI_ID	                                TARIH
-    1d033d3a-b090-11e9-9757-000d3a38a36f	2013-01-14
+    12f0df54-accc-11e9-a2fc-000d3a38a36f	2021-04-21
+    7c6ee6da-e531-11ea-b769-000d3a38a36f	2020-08-23
+    1dbd288e-26d3-11eb-8a9b-000d3a38a36f	2020-11-14
+    84cdd274-cd93-11ea-b31f-000d3a38a36f	2020-07-24
+    .
+    .
+    .
 */
 
 
--- 25 /  İlk alışveriş yapan kişinin alışveriş yapma gün ortalamasını getiren sorguyu yazınız.
+-- 24 /  İlk alışveriş yapan kişinin alışveriş yapma gün ortalamasını getiren sorguyu yazınız.
 
 SELECT TOP 1 master_id MUSTERI_ID, first_order_date TARIH,
 (DATEDIFF(DAY,first_order_date, last_order_date)) / (order_num_total_ever_offline + order_num_total_ever_online) ALISVERIS_SIKLIGI
